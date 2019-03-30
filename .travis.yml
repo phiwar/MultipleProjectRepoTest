@@ -11,11 +11,9 @@ matrix:
         - tools
         - android26
         - build-tools-26.0.2
-    install:
-    - chmod +x gradlew
     before_script: 
      - cd Client/MyApplication
     script:
-     - ./gradlew test
+     - chmod +x ./gradlew test
 
 
