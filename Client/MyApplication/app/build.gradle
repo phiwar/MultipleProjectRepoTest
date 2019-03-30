@@ -1,5 +1,26 @@
 apply plugin: 'com.android.application'
+apply plugin: 'checkstyle'
 
+task checkstyle(type: Checkstyle) {
+    configFile file("${project.rootDir}/google_checks.xml")
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+
+    // empty classpath
+    classpath = files()
+}
+
+checkstyle{
+    toolVersion = 8.16
+    ignoreFailures = false
+
+}
+tasks.withType(Checkstyle) {
+    reports {
+        html.destination rootProject.file("build/reports/checkstyle.html")
+    }
+}
 android {
     compileSdkVersion 28
     defaultConfig {
