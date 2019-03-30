@@ -8,7 +8,7 @@ public final class Application {
    * This class is not meant to be initialized after compile-time.
    */
   private Application() { }
-
+  
   /**
    * Main method. Initializes Counter.
    * @param args The arguments
