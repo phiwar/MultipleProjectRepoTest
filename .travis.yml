@@ -3,7 +3,7 @@ matrix:
   - language: java
     before_script:
      - cd Server
-    script: mvn install -B
+    script: mvn test -B
   - language: android
     jdk: oraclejdk8
     android:
@@ -14,6 +14,7 @@ matrix:
     before_script: 
      - cd Client/MyApplication
     script:
-     - chmod +x ./gradlew test
+     -  chmod +x gradlew
+     - ./gradlew build connectedCheck
 
 
