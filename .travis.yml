@@ -10,10 +10,11 @@ matrix:
       components: 
         - tools
         - android-28.0.0
-        - build-tools-26.0.2
+        - build-tools-28.0.0
         - sys-img-x86-android-28
-        - sys-img-armeabi-v7a-android-17
-
+        - android-15
+        - sys-img-armeabi-v7a-android-15
+        - sys-img-x86-android-15
 
     before_install:
     - yes | sdkmanager "platforms;android-28"
