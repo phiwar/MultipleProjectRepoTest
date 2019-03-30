@@ -3,7 +3,8 @@ matrix:
   - language: java
     before_script:
      - cd Server
-     
+    script: mvn test -B
+    
   - language: android
     jdk: oraclejdk8
       components: 
@@ -12,3 +13,4 @@ matrix:
         - build-tools-25.0.3
     before_script: 
      - cd Client
+    script: ./gradlew test
