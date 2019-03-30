@@ -12,7 +12,8 @@ matrix:
         - android26
         - build-tools-26.0.2
     before_script: 
-     - cd Client
+     - cd Client/MyApplication
     script:
-     - gradle build connectedCheck
+     - ./gradlew test
+
 
