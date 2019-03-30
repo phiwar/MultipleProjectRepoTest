@@ -31,6 +31,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    adbOptions {
+        timeOutInMs 20 * 60 * 1000  // 20 minutes
+        installOptions "-d","-t"
+    }
     buildTypes {
         release {
             minifyEnabled false
