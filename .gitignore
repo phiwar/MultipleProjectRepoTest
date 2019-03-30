@@ -1,0 +1,31 @@
+#idea
+.idea/
+*.iml
+*.iws
+
+#maven
+log/
+target/
+
+# gradle
+.gradle/
+build/
+
+# Built android application files
+*.apk
+*.ap_
+*.aab
+
+# Generated files
+bin/
+gen/
+out/
+
+#Local config
+local.properties
+
+# Android Studio Navigation tmp files
+.navigation/
+
+
+
