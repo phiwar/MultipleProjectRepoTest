@@ -13,4 +13,5 @@ matrix:
         - build-tools-25.0.3
     before_script: 
      - cd Client
-    script: ./gradlew test
+    script: gradle build connectedCheck
+
