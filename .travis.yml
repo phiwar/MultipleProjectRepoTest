@@ -8,25 +8,18 @@ matrix:
     jdk: oraclejdk8
     android:
       components: 
-        - android-28.0.0
+        - tools
+        - tools
+        - platform-tools
         - build-tools-28.0.0
-        - sys-img-x86-android-28
-        - android-20
-        - sys-img-armeabi-v7a-android-20
-
+        - android-28.0.0
     before_install:
     - yes | sdkmanager "platforms;android-28"
     before_script: 
      - cd Client/MyApplication
      - chmod +x gradlew
-     - echo no | android create avd --force -n test -t android-20 --abi armeabi-v7a -c 100M
-     - emulator -avd test -no-window &
-     - android-wait-for-emulator
-     - adb shell input keyevent 82 &
-
    
     script:
-     - android list target
      - ./gradlew build connectedCheck
 
 
