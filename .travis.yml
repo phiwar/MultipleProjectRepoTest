@@ -39,11 +39,11 @@ matrix:      # Run both android and java tests
      - emulator -avd test -no-window &
      - android-wait-for-emulator
      - adb shell input keyevent 82 &
-   
+    
     script:
      - android list target
      # Tell gradle to run tests. 
-     - ./gradlew other checkstyle --info
+     - ./gradlew checkstyle
      - ./gradlew build connectedCheck
 
 
