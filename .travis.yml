@@ -36,7 +36,7 @@ matrix:      # Run both android and java tests
      
      # Actually start the emulator.
      - echo no | android create avd --force -n test -t android-17 --abi armeabi-v7a
-     - emulator -avd test -no-skin -no-audio -no-window &
+     - emulator -avd test -no-window &
      - android-wait-for-emulator
      - adb shell input keyevent 82 &
    
