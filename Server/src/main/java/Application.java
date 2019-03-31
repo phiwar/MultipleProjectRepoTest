@@ -4,13 +4,15 @@
 public final class Application {
 
   /**
-   * * Private constructor.
-   * This class is not meant to be initialized after compile-time.
+   * Private constructor. This class is not meant
+   * to be initialized after compile-time.
    */
-  private Application() { }
-  
+  private Application() {
+  }
+
   /**
    * Main method. Initializes Counter.
+   *
    * @param args The arguments
    */
   public static void main(final String[] args) {
