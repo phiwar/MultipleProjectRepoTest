@@ -8,7 +8,6 @@ matrix:
     jdk: oraclejdk8
     android:
       components: 
-        - tools
         - android-28.0.0
         - build-tools-28.0.0
         - sys-img-x86-android-28
