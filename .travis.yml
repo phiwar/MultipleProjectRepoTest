@@ -43,6 +43,7 @@ matrix:      # Run both android and java tests
     script:
      - android list target
      # Tell gradle to run tests. 
+     - ./gradlew other checkstyle --info
      - ./gradlew build connectedCheck
 
 
