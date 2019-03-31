@@ -13,7 +13,6 @@ matrix:
         - sys-img-x86-android-28
         - android-20
         - sys-img-armeabi-v7a-android-20
-        #- sys-img-x86-android-15
 
     before_install:
     - yes | sdkmanager "platforms;android-28"
@@ -28,6 +27,6 @@ matrix:
    
     script:
      - android list target
-     - ./gradlew build connectedAndroidTest
+     - ./gradlew build connectedCheck
 
 
